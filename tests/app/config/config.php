@@ -15,7 +15,6 @@ return [
     ],
     'language' => 'en-US',
     'controllerNamespace'=>'app\\controllers',
-    
     'components' => 
         array_merge($components,
             [
