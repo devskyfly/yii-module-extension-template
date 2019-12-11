@@ -10,6 +10,8 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@webroot' => dirname(__DIR__).'/web',
+        '@webroot/assets' => dirname(__DIR__).'/web/assets',
         '@app' => dirname(__DIR__),
         '@frontend' => dirname(__DIR__),
     ],
