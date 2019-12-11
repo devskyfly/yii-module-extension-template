@@ -2,9 +2,22 @@
 
 ### Settings
 
-1. Set composer.json properties "name", "autoload/psr-4" (vendor//package//)
-2. Set db connection properties tests/app/config/components/db.php (dbname, user, password)
-3. Define testsClear method, this method invokes before tests runs.
+1. Set in composer.json properties "name"
+
+2. Set in composer.json "autoload/psr-4" (vendor//package//)
+
+```json
+{
+    "autoload" : {
+		"psr-4" : {
+			"" : "src"
+		}
+    },
+}
+```
+
+3. Set db connection properties tests/app/config/components/db.php (dbname, user, password)
+4. Define testsClear method, this method invokes before tests runs.
 
 ##  Init
 
