@@ -1,6 +1,8 @@
 <?php
 
-$components = require __DIR__ . '/componets/components.php';
+$components = require __DIR__ . '/componets/config.php';
+$modules = require __DIR__ . '/modules/config.php';
+
 /**
  * Application configuration shared by all test types
  */
@@ -30,5 +32,6 @@ return [
                 'cookieValidationKey' => 'test',
                 'enableCsrfValidation' => false,
                 ]
-        ])
+        ]),
+    'modules' => array_merge($modules, [])
 ];

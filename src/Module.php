@@ -5,6 +5,7 @@ use Yii;
 
 class Module extends \yii\base\Module
 {   
+    const CSS_NAMESPACE = '';
 
     public function init()
     {
@@ -17,10 +18,5 @@ class Module extends \yii\base\Module
         if (Yii::$app instanceof \yii\console\Application) {
             $this->controllerNamespace='vendor\package\console';
         } 
-    }
-    
-    public static function getCssNamespace()
-    {
-        return "";
     }
 }
