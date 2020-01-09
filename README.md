@@ -33,8 +33,10 @@ composer install
 robo dev:init-project 
 ```
 
-3. Rm or edit src/Module.php
+3. Rm or edit src/console/CommandController.php
 
-4. Rm or edit src/ModuleException.php
+4. Rm or edit src/Module.php
 
-5. Start development
+5. Rm or edit src/ModuleException.php
+
+6. Start development
