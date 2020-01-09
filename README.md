@@ -35,4 +35,6 @@ robo dev:init-project
 
 3. Rm or edit src/Module.php
 
-4. Start development
+4. Rm or edit src/ModuleException.php
+
+5. Start development
