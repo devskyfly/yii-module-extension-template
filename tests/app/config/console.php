@@ -1,5 +1,5 @@
 <?php
-$components = require __DIR__ . '/componets/components.php';
+$components = require __DIR__ . '/componets/config.php';
 
 $config = [
     'id' => 'basic-console',
