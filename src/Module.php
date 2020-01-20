@@ -5,6 +5,7 @@ use Yii;
 
 class Module extends \yii\base\Module
 {   
+    const TITLE = '';
     const CSS_NAMESPACE = '';
 
     public function init()

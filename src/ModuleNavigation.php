@@ -1,11 +1,11 @@
 <?php
-namespace vendor\package\models\common;
+namespace vendor\package;
 
 use yii\base\BaseObject;
 use devskyfly\php56\types\Arr;
 use devskyfly\php56\types\Str;
 
-abstract class ModuleNavigation extends BaseObject
+class ModuleNavigation extends BaseObject
 {
     public $module_name = "";
     public $module_route = "";
@@ -16,15 +16,15 @@ abstract class ModuleNavigation extends BaseObject
     {
         parent::init();
         
-        $this->module_name=$this->moduleName();
-        $this->module_route=$this->moduleRoute();
-        $this->list=$this->moduleList();
+        $this->module_name = $this->moduleName();
+        $this->module_route = $this->moduleRoute();
+        $this->list = $this->moduleList();
         
-        if(!Str::isString($this->module_name)){
+        if (!Str::isString($this->module_name)) {
             throw new \InvalidArgumentException('Property $module_name is not string type');
         }
         
-        if(!Str::isString($this->module_route)){
+        if (!Str::isString($this->module_route)) {
             throw new \InvalidArgumentException('Property $module_route is not string type');
         }
         
@@ -34,8 +34,8 @@ abstract class ModuleNavigation extends BaseObject
     public function getData()
     {
         return [
-            "label"=>["text"=>$this->module_name,"route"=>$this->module_route],
-            "sub_list"=>$this->list
+            "label"=>["text" => $this->module_name, "route" => $this->module_route],
+            "sub_list" => $this->list
         ];
     }
     
@@ -46,20 +46,20 @@ abstract class ModuleNavigation extends BaseObject
      */
     protected function checkList()
     {
-        if(!Arr::isArray($this->list)){
+        if (!Arr::isArray($this->list)) {
             throw \InvalidArgumentException('Property $list is not array type');
         }
-        foreach ($this->list as $item){
-            if(!Arr::keyExists($item, 'name')){
+        foreach ($this->list as $item) {
+            if (!Arr::keyExists($item, 'name')) {
                 throw new \OutOfBoundsException("Key 'name' does not exist.");
             }
-            if(!Str::isString($item['name'])){
+            if (!Str::isString($item['name'])) {
                 throw new \InvalidArgumentException('$item[\'name\'] is not string type');
             }
-            if(!Arr::keyExists($item, 'route')){
+            if (!Arr::keyExists($item, 'route')) {
                 throw new \OutOfBoundsException("Key 'route' does not exist.'");
             }
-            if(!Str::isString($item['route'])){
+            if (!Str::isString($item['route'])) {
                 throw new \InvalidArgumentException('$item[\'route\'] is not string type');
             }
         }
@@ -77,6 +77,8 @@ abstract class ModuleNavigation extends BaseObject
 
     protected function moduleList()
     {
-        return [["name" => "", "route" => ""]]];
+        return [
+            ["name" => "", "route" => ""]
+        ];
     }
 }

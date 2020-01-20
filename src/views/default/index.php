@@ -2,7 +2,7 @@
 /* $this yii/web/view */
 /* $list []*/
 /* $title string */
-use vendor\package\widgets\common\NavigationMenu;
+use vendor\package\widgets\NavigationMenu;
 ?>
 
 <?

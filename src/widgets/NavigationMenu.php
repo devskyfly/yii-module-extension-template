@@ -1,5 +1,5 @@
 <?php
-namespace vendor\package\widgets\common;
+namespace vendor\package\widgets;
 
 use devskyfly\php56\types\Arr;
 use yii\base\Widget;
