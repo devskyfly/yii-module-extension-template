@@ -1,23 +1,70 @@
 <?php
 namespace vendor\package;
 
-use Yii;
-
 class Module extends \yii\base\Module
 {   
-    const TITLE = '';
-    const CSS_NAMESPACE = '';
 
     public function init()
     {
         parent::init();
-        Yii::setAlias("@vendor/package", __DIR__);
-        
-        /**
-         * Define controller namespace for console application
-         */
-        if (Yii::$app instanceof \yii\console\Application) {
-            $this->controllerNamespace='vendor\package\console';
-        } 
+        // Code
+    }
+    
+    public function initNavigationInfo()
+    {
+        $this->navigationInfo = [
+            [
+                "label" => "",
+                "sub_list" => [
+                    [
+                        "name" => "",
+                        "route" => ""
+                    ]
+                ]
+            ]
+        ];
+    } 
+
+    /**
+     *
+     * @return string
+     */
+    public static function title()
+    {
+        return "";
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public static function cssNamespace()
+    {
+        return "";
+    }
+    
+    public static function dir()
+    {
+        return __DIR__;
+    }
+
+    public static function vendor()
+    {
+        return 'vendor';
+    }
+
+    public static function package()
+    {
+        return "package";
+    }
+
+    public static function tablesPrefix()
+    {
+        return "module-prefix";
+    }
+
+    public static function getRoute()
+    {
+        return "/".(Module::getInstance())->id;
     }
 }
