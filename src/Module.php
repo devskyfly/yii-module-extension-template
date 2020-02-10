@@ -7,7 +7,7 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-        // Code
+        // Your code
     }
     
     public function initNavigationInfo()

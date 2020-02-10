@@ -23,14 +23,16 @@ return [
         array_merge($components,
             [
                 'urlManager' => [
-                'showScriptName' => true,
+                    'enablePrettyUrl' => true,
+                    'showScriptName' => false,
+                    'enableStrictParsing' => false
                 ],
                 'errorHandler' => [
                     'errorAction' => 'site/error',
                 ],
                 'request' => [
-                'cookieValidationKey' => 'test',
-                'enableCsrfValidation' => false,
+                    'cookieValidationKey' => 'test',
+                    'enableCsrfValidation' => false
                 ]
         ]),
     'modules' => array_merge($modules, [])
