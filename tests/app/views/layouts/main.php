@@ -15,7 +15,9 @@ use yii\helpers\Html;
 </head>
 <body>
 <?php $this->beginBody() ?>
+    <div class="container-fluid">
     <?= $content ?>
+    </div>
 <?php $this->endBody() ?>
 </body>
 </html>
